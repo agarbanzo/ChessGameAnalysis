@@ -19,16 +19,12 @@ namespace ChessGameAnalysis.Controllers
         }
 
         // GET: Players
-        [Route("Players")]
-        [HttpGet]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Player.ToListAsync());
         }
 
         // GET: Players/Details/5
-        [Route("Players/Details")]
-        [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -47,8 +43,6 @@ namespace ChessGameAnalysis.Controllers
         }
 
         // GET: Players/Create
-        [Route("Players/Create")]
-        [HttpGet]
         public IActionResult Create()
         {
             return View();

@@ -7,3 +7,4 @@
 /.vs/ChessGameAnalysis/v15/Server/sqlite3
 /ChessGameAnalysis/obj
 .vs
+/ChessGameAnalysis/ChessGameAnalysis.csproj.user

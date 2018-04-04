@@ -26,7 +26,7 @@ namespace ChessGameAnalysis
             services.AddMvc();
 
             var connection = @"server=localhost;port=3306;user=root;password=password;database=chessgameanalytics";
-            services.AddDbContext<chessgameanalyticsContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<chessgameanalyticsContext>(options => options.UseMySql(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +49,7 @@ namespace ChessGameAnalysis
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "players", template: "{controller=Player}/actions=Index/{id}");
             });
         }
     }
